@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main class="calculator">
+    <div class="container">
+      <div class="input-container">
+        <label for="bill-amount">Bill</label>
+        <input class="input-field" type="number" name="amount" id="bill-amount" placeholder="0" aria-label="bill-amount" min="0">
+        <i class="fa fa-usd" style="font-size: 20px;" aria-hidden="true"></i>
+        <form action="">
+          <label>Select Tip %</label>
+          <div class="percent-options">
+            <button value="5" class="btn_5 btns" >
+              5 %
+            </button>
+            <button type="button" value="10" class="btn_10 btns" >
+              10 %
+            </button>
+            <button type="button" value="15" class="btn_15 btns" >
+              15 %
+            </button>
+            <button type="button" value="25" class="btn_25 btns" >
+              25 %
+            </button>
+            <button type="button" value="50" class="btn_50 btns" >
+              50 %
+            </button>
+            <input id="custom" class="custom-percentage" type="number" max="100" placeholder="Custom" aria-label="enter-custom-input">
+          </div>
+        </form>
+
+        <form class="num-people">
+
+          <label for="people-count">Number of People</label>
+          <i class="fa fa-user" style="font-size: 20px;" aria-hidden="true"></i>
+
+          <input class="input-field" type="number" name="number-people" id="people-count" placeholder="0" aria-label="enter-number-of-people" required="" aria-required="true" min="0" max="100">
+        </form>
+
+      </div>
+
+      <article class="display-container">
+        <div>
+          <div class="display-tip">
+            <div>
+              <p class="display-description">Tip Amount</p>
+              <p class="person">/ person</p>
+            </div>
+            <p class="amount show-tip">
+              $0.00
+            </p>
+          </div>
+
+          <div class="display-total">
+            <div>
+              <p class="display-description">Total</p>
+              <p class="person">/ person</p>
+            </div>
+            <p class="amount show-total">
+              $0.00
+            </p>
+
+          </div>
+        </div>
+        
+        <button class="reset-btn" >reset</button>
+      </article>
+    </div>
+  </main>
+
+
+<script src="main.js"></script>
+  
+</body>
+</html>

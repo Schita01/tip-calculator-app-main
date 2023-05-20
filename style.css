@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan-2: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+    --Light-grayish-cyan-2: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-1: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --red: rgb(255, 102, 102)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    font-family: "Space Mono", "Courier New", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--White);
+    position: relative;
+    border-radius: 20px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    max-width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan-2);
+    position: relative;
+    display: block;
+}
+
+.input-field {
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan-1);
+    text-align: right;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 5px;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.input-field:focus{
+    border: 3px solid hsla(172, 67%, 45%, 0.445);
+    border-radius: 5px;
+    outline: none;
+}
+
+.fa-usd{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 10px;
+    color: var(--Dark-grayish-cyan-1);
+    opacity: 0.5;
+    font-weight: 800;
+    z-index: 1000;
+}
+
+
+form {
+    position: relative;
+    margin-top: 1.4rem;
+}
+
+
+
+
+.percent-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr ;
+    gap: 1rem;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.percent-options button {
+    color: var(--Light-grayish-cyan-1);
+    background-color: var(--Very-dark-cyan);
+    letter-spacing: 1.2px;
+}
+
+.percent-options  button, .custom-percentage {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 105px;
+}
+
+
+.custom-percentage {
+    width: 100%;
+    text-align: center;
+    background-color: var(--Light-grayish-cyan-1);
+    color: var(--Dark-grayish-cyan-2);
+    transition: all 0.5s;
+}
+
+
+.percent-options button:hover{
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan-2);
+    letter-spacing: 1.2px;
+}
+
+.fa-user{
+    position: absolute;
+    margin-left: 10px;
+    padding-top: 15px;
+    color: var(--Dark-grayish-cyan-1);
+    opacity: 0.5;
+    font-weight: 800;
+    z-index: 1000;
+}
+
+article.display-container {
+    background-color: var(--Very-dark-cyan);
+    width: 350px;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 1.1rem;
+}
+
+
+.display-container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+button.reset-btn {
+    max-width: 100%;
+    width: 100%;
+    padding: 5px;
+    font-family: "Space Mono", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Strong-cyan);
+    color: var(--White);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button.reset-btn:hover{
+    background-color:  hsl(172, 75%, 62%);
+}
+
+
+
+.display-tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+
+.display-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.display-description{
+    color: var(--Light-grayish-cyan-1);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.amount{
+    color: var(--Strong-cyan);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.person{
+    color: var(--Dark-grayish-cyan-1);
+    
+}
+
+
+@media only screen and (max-width: 865px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        gap: 20px;
+    }
+
+    .percent-options button {
+        width: 80px;
+    }
+
+    .custom-percentage{
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+    }
+
+    .percent-options button {
+        width: 70px;
+    }
+
+    .custom-percentage{
+        font-size: 15px;
+    }
+}
+
